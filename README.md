@@ -1,7 +1,7 @@
 # otp-redis-twilio
 
 ## Features
-- Generate and send OTP to a provided phone number via Twilio SMS.
+- Generate and send OTP to a provided phone number via Twilio WhatsApp(or SMS).
 - Verify the OTP against the phone number.
 - Store OTPs in Redis for validation and expiration management.
 - API documentation provided by Swagger UI.
