@@ -20,7 +20,7 @@ public class TwilioService {
 
     public void sendOTP(String phoneNumber, String otpCode) {
         Message message = Message.creator(
-                        new PhoneNumber(phoneNumber),
+                        new PhoneNumber("whatsapp:"+phoneNumber),
                         new PhoneNumber(twilioConfig.getPhoneNumber()),
                         "Your OTP is: " + otpCode)
                 .create();
