@@ -44,7 +44,12 @@
 			<artifactId>twilio</artifactId>
 			<version>8.28.0</version> <!-- Use the latest Twilio version -->
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.sonatype.sisu</groupId>
+            <artifactId>sisu-inject-bean</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
