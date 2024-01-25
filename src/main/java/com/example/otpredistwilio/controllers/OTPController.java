@@ -7,6 +7,7 @@ import com.example.otpredistwilio.models.requests.VerifyOTPRequest;
 import com.example.otpredistwilio.models.responses.SendOTPResponse;
 import com.example.otpredistwilio.models.responses.VerifyOTPResponse;
 import com.example.otpredistwilio.services.OTPService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class OTPController {
 
 
     @PostMapping ("/send")
-    public ResponseEntity<?> sendOTP(@RequestBody SendOTPRequest sendOTPRequest) {
+    public ResponseEntity<?> sendOTP(@Valid @RequestBody SendOTPRequest sendOTPRequest) {
         try {
             SendOTPResponse result = otpService.generateOTP(sendOTPRequest.getPhoneNumber());
             return ResponseEntity.ok(result);
